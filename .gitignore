@@ -1,124 +1,89 @@
-## Below are example of common git excludes.
-## Please note that /cookbooks folder is ignored. This allows users to
-## clone individual cookbooks into the /cookbook folder of the chef repo
-## and work on them in parallel. This pattern also allows for chef-workstation
-## pattern, where base repo also builds out a dynamic chef workstation.
-## Examples of workstation cookbooks:
-##    https://github.com/mwrock/chef_workstation
-##    https://github.com/Nordstrom/chefdk_bootstrap
+
+### Project-Specific ###
 
 
-## Ignore Chef related files and secrets
-.chef
-.chef/*.pem
-.chef/encrypted_data_bag_secret
+### ChefCookbook ###
+.vagrant
+/cookbooks
 
-## Ignore Chef-Zero files
-clients
-nodes
+# Bundler
+bin/*
+.bundle/*
 
-# ## OS junk files
-# [Tt]humbs.db
-# *.DS_Store
+.kitchen/
+.kitchen.local.yml
 
-# ## Example of the workstation pattern.
-# !/cookbooks/chef_workstation/files/default/bundler/Gemfile
-# !/cookbooks/chef_workstation/files/default/bundler/Gemfile.lock
-# cookbooks/*
-# !cookbooks/chef_workstation
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# ##Chef
-# .kitchen/
-# .vagrant
-# nodes
-# metadata.json
+# Icon must end with two \r
+Icon
 
-# ##ruby
-# *.gem
-# Gemfile
-# Gemfile.lock
-.rake_test_cache
+# Thumbnails
+._*
 
-# ## Rails Heroku and other bits to ignore
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Vagrant ###
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
 # *.log
-# *.sqlite3
-# db/*.sqlite3
-# .bundle
-# log/*
-# tmp/*
-# public/system/*
 
-# ## nodejs
-# node_modules
+### Vagrant Patch ###
+*.box
 
-# ## Nuget (exclude all exes except for the one in the global build folder)
-# nuget.exe
-# !build/nuget/nuget.exe
-# *.nupkg
-# # NuGet packages (based on default naming convention)
-# [Bb]uild/[Pp]ackages/
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# ## Build System # common build output folders
-# build-common/
-# output/
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
 
-# ## VM images
-# *.vhd
-# *.vhdx
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
-# ## Pester Test summary
-# Test.xml
+# Dump file
+*.stackdump
 
-# ## JetBrains files
-# *.idea
-# .idea
-# .idea/
+# Folder config file
+[Dd]esktop.ini
 
-# ## Mono files
-# *.pidb
-# *.userprefs
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# ## Visual Studio files
-# *.docstates
-# *.[Oo]bj
-# *.dat
-# *.crc
-# *.dbmdl
-# *.pdb
-# *.user
-# *.aps
-# *.pch
-# *.vspscc
-# *.vssscc
-# *_i.c
-# *_p.c
-# *.ncb
-# *.suo
-# *.tlb
-# *.tlh
-# *.bak
-# *.[Cc]ache
-# *.ilk
-# *.log
-# *.lib
-# *.sbr
-# *.schemaview
-# ipch/
-# [Oo]bj/
-# [Bb]in/*
-# [Dd]ebug*/
-# [Rr]elease*/
-# Ankh.NoLoad
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
-# ## Tooling
-# _ReSharper*/
-# *.[Rr]e[Ss]harper
-# [Tt]est[Rr]esult*
-# .[Jj]ust[Cc]ode
-# *ncrunch*
-
-# ## Subversion files
-# .svn
-
-# ## Office Temp Files
-# ~$*
+# Windows shortcuts
+*.lnk

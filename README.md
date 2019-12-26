@@ -1,8 +1,8 @@
 # Overview
 
-Every Chef Infra installation needs a Chef Repository. This is the place where cookbooks, policyfiles, config files and other artifacts for managing systems with Chef Infra will live. We strongly recommend storing this repository in a version control system such as Git and treating it like source code.
+Chef Infra generator used to create [Effortless Infrastructure](<chef.io/products/effortless-infrastructure/>) repositories with Chef Infra cookbook and Habitat package configurations.
 
-# Repository Directories
+## Repository Directories
 
 This repository contains several directories, and each directory contains a README file that describes what it is for in greater detail, and how to use it for managing your systems with Chef.
 
